@@ -55,7 +55,11 @@ header {
 .social a {
     display: block;
     background: url(../img/sprite.png) no-repeat;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+}
+
+.social a:hover {
+    transform: scale(1.2);
 }
 
 a.fb {
@@ -290,7 +294,7 @@ main .main-picture {
 }
 
 .main-picture h2 {
-    font: 700 25px/24px "Roboto Slab";
+    font: 700 24px "Roboto Slab";
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #ffffff;
@@ -325,94 +329,76 @@ main .main-picture {
     padding: 40px 0 0 0;
 }
 
-.aside {
-    width: 20%;
-    min-width: 220px;
-    margin-bottom: 45px;
+.open_1 .finished {
+    border: none;
 }
 
-.aside ul {
-    list-style: none;
+.open_1 .last {
+    border: none;
 }
 
-.aside h3 {
+.open_1 .last:hover {
+    border-radius: 0 0 3px 3px;
+}
+
+.around p {
     margin: 0;
-    min-width: 220px;
-    padding: 10.5px;
-    border-radius: 3px 3px 0 0;
-    background-color: #1f1f56;
-    font: 700 16px/24px "Roboto Slab";
-    color: #ffffff;
-}
-
-.aside a {
-    display: block;
-    text-decoration: none;
-    margin: 0;
-    box-shadow: inset 0px -1px 0px #cecedd;
-    min-width: 219px;
-    padding: 10px;
-    background-color: #e4e4ec;
-    font: 14px/24px Arial;
-    color: #25252c;
-    position: relative;
-}
-
-.aside li ul a {
-    display: none;
-    margin: 0;
-    box-shadow: inset 0px -1px 0px #cecedd;
-    min-width: 219px;
-    padding: 10px;
-    background-color: #e4e4ec;
-    font: 14px/24px Arial;
-    color: #25252c;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.aside li:hover ul a {
-    display: block;
-}
-
-
-.aside li .before:hover {
-    background-color: #fd8300;
+    padding: 15px;
     color: #fff;
+    background-color: #1f1f56;
+    border-radius: 3px 3px 0 0;
 }
 
-.aside li:hover span {
-    border-right-color: #fff;
-    border-bottom-color: #fff;
-    transform: rotate(45deg);
+.around a:hover {
+    color: #fff;
+    background-color: #fd8300;
+    border-color: transparent;
 }
 
-.aside li ul a:hover {
+.around li {
+    width: 100%;
+}
+
+.around:last-child {
+    border-radius: 0 0 3px 3px;
+}
+
+.open {
+    display: none;
+}
+
+aside .open a {
+    padding-left: 30px;
+    color: #666;
+}
+
+.open a:hover {
     background-color: #cecedd;
 }
 
-.aside li {
-    transition: all 0.3s ease;
+.around {
+    height: min-content;
+    width: 220px;
+    background-color: #e4e4ec;
 }
 
-.aside ul {
+li:hover ul {
+    display: block;
+}
+
+.around ul {
+    margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-.aside li span {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #666;
-    border-left-color: transparent;
-    border-top-color: transparent;
-    transform: rotate(-45deg);
-}
-
-.aside li a {
+.around a {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 15px;
+    color: #25252c;
+    text-decoration: none;
+    border-bottom: 1px solid #cdcddd;
 }
 
 .article h2 {
@@ -436,7 +422,7 @@ main .main-picture {
 }
 
 .article a:hover {
-    color: #666;
+    color: black;
 }
 
 .text {
@@ -450,8 +436,11 @@ main .main-picture {
 
 .houses a {
     display: block;
-    font: bold 14px/24px "Arial";
+    padding-top: 15px;
+    margin-bottom: 5px;
     color: #1f1f56;
+    font-size: 16px;
+    font-weight: bold;
     text-decoration: none;
 }
 
