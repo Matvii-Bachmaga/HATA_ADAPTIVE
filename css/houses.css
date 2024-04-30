@@ -119,21 +119,10 @@ table {
     min-width: 700px;
 }
 
-.houses-for-sale {
-    width: 960px;
-}
-
-@media screen and (min-width: 768px) {
-    .table-adaptive {
-        overflow-x: unset;
-    }
-}
-
 @media screen and (min-width: 1440px) {
     main {
         padding-top: 205px;
     }
-
     header {
         position: fixed;
         width: 100%;

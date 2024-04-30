@@ -97,7 +97,7 @@ main {
 }
 
 .inputs {
-    max-width: 255px;
+    width: 100%;
     position: relative;
     margin-bottom: 30px;
 }
@@ -106,6 +106,7 @@ main {
     margin: 0;
     padding: 6.6px;
     min-width: 140px;
+    width: 140px;
     border-radius: 21px;
     background-color: #fd8300;
     font: bold 14px/24px "Arial";
@@ -142,19 +143,19 @@ main {
 
 .inputs input {
     padding: 11px 15px;
-    max-width: 125px;
+    width: 100%;
     margin-bottom: 10px;
     border-radius: 3px;
     border: 1px solid #c5c5d4;
 }
 
 .inputs .topic {
-    min-width: 255px;
+    width: 100%;
 }
 
 .inputs textarea {
     padding: 11px 15px;
-    max-width: 255px;
+    width: 100%;
     max-height: 300px;
     min-height: 106px;
     resize: vertical;
@@ -163,11 +164,14 @@ main {
     border: 1px solid #c5c5d4;
 }
 
-.top-inputs,
-.down-inputs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.down-inputs input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+}
+
+.down-inputs label {
+    position: relative;
 }
 
 .form .down-inputs {
@@ -180,19 +184,118 @@ main {
     margin-bottom: 3px;
 }
 
+.down-inputs input[type=checkbox]+label::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #c5c5d4;
+    left: -12%;
+    transform: translateY(5%);
+}
+
+.down-inputs input[type=checkbox]:checked+label::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 4px;
+    top: 6px;
+    left: -22px;
+    border: 2px solid #1f1f56;
+    border-top: transparent;
+    border-right: transparent;
+    transform: rotate(-45deg);
+}
+
+.down-inputs .button {
+    margin-bottom: 20px;
+ }
+
 .down-inputs label {
     font: 13px/21px "Arial";
     color: #666;
     margin-left: 10px;
 }
 
+@media screen and (min-width: 320px)  {
+    .down-inputs input[type=checkbox]+label::before {
+        top: -20%;
+    }
+
+    .down-inputs input[type=checkbox]:checked+label::after {
+        top: 3px;
+    }
+}
+
 @media screen and (min-width: 768px) {
+    .top-inputs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .map {
+        width: 80%;
+    }
+
+    .down-inputs input[type=checkbox]+label::before {
+        top: 0;
+    }
+
+    .down-inputs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        
+    .down-inputs .button {
+        margin-bottom: 0;
+    }
+
+    .inputs {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .map {
+        width: 80%;
+    }
+
+    .top-inputs input {
+        min-width: 320px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .map {
+        width: 55%;
+    }
+
+    main {
+        padding-top: 205px;
+    }
+
+    .form {
+        justify-content: space-between;
+    }
+
     .inputs {
         max-width: 467px;
     }
 
+    .top-inputs {
+        max-width: 467px;
+    }
+
+    .top-inputs input {
+        width: 171px;
+    }
+
     .inputs .topic {
-        min-width: 467px;
+        max-width: 467px;
     }
 
     .inputs textarea {
@@ -201,22 +304,6 @@ main {
 
     .inputs input {
         min-width: 230px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .map {
-        width: 49%;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    main {
-        padding-top: 205px;
-    }
-
-    .form {
-        justify-content: space-between;
     }
 }
 
