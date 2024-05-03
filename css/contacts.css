@@ -201,7 +201,6 @@ main {
     position: absolute;
     width: 7px;
     height: 4px;
-    top: 6px;
     left: -22px;
     border: 2px solid #1f1f56;
     border-top: transparent;
@@ -244,6 +243,10 @@ main {
         top: 0;
     }
 
+    .down-inputs input[type=checkbox]:checked+label::after {
+        top: 6px;
+    }
+    
     .down-inputs {
         display: flex;
         justify-content: space-between;
@@ -271,7 +274,7 @@ main {
 
 @media screen and (min-width: 1440px) {
     .map {
-        width: 55%;
+        width: 50%;
     }
 
     main {
@@ -283,11 +286,11 @@ main {
     }
 
     .inputs {
-        max-width: 467px;
+        width: 45%;
     }
 
     .top-inputs {
-        max-width: 467px;
+        max-width: 519px;
     }
 
     .top-inputs input {
@@ -295,24 +298,29 @@ main {
     }
 
     .inputs .topic {
-        max-width: 467px;
+        max-width: 519px;
     }
 
     .inputs textarea {
-        max-width: 467px;
+        max-width: 519px;
     }
 
     .inputs input {
-        min-width: 230px;
+        min-width: 255px;
     }
 }
 
 @media screen and (min-width: 2560px) {
     .inputs {
-        max-width: 934px;
+        max-width: 943px;
     }
+
+    .top-inputs {
+        max-width: 943px;
+    }
+
     .inputs .topic {
-        min-width: 934px;
+        min-width: 923px;
     }
 
     .inputs textarea {
@@ -320,6 +328,6 @@ main {
     }
 
     .inputs input {
-        min-width: 460px;
+        min-width: 455px;
     }
 }
